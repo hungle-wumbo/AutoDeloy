@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54B6C2E3DDCFD00FD5C46B24 /* Pods_AutoDeloyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996562C584E702008660B035 /* Pods_AutoDeloyApp.framework */; };
 		C32384B021D21B0B00D1F35D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32384AF21D21B0B00D1F35D /* AppDelegate.swift */; };
 		C32384B221D21B0B00D1F35D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32384B121D21B0B00D1F35D /* ViewController.swift */; };
 		C32384B521D21B0B00D1F35D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32384B321D21B0B00D1F35D /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20C2E79963EE0F2619755F3B /* Pods-AutoDeloyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoDeloyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoDeloyApp/Pods-AutoDeloyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4F56491028B6524F91E6B7AD /* Pods-AutoDeloyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoDeloyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoDeloyApp/Pods-AutoDeloyApp.release.xcconfig"; sourceTree = "<group>"; };
+		996562C584E702008660B035 /* Pods_AutoDeloyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoDeloyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32384AC21D21B0B00D1F35D /* AutoDeloyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoDeloyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32384AF21D21B0B00D1F35D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C32384B121D21B0B00D1F35D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B6C2E3DDCFD00FD5C46B24 /* Pods_AutoDeloyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275CCC12D38250934095A5FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				996562C584E702008660B035 /* Pods_AutoDeloyApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47F727D575424CC4DF55E1E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20C2E79963EE0F2619755F3B /* Pods-AutoDeloyApp.debug.xcconfig */,
+				4F56491028B6524F91E6B7AD /* Pods-AutoDeloyApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C32384A321D21B0B00D1F35D = {
 			isa = PBXGroup;
 			children = (
 				C32384AE21D21B0B00D1F35D /* AutoDeloyApp */,
 				C32384AD21D21B0B00D1F35D /* Products */,
+				47F727D575424CC4DF55E1E5 /* Pods */,
+				275CCC12D38250934095A5FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C32384BE21D21B0D00D1F35D /* Build configuration list for PBXNativeTarget "AutoDeloyApp" */;
 			buildPhases = (
+				7443258B2DA87B89B973A44C /* [CP] Check Pods Manifest.lock */,
 				C32384A821D21B0B00D1F35D /* Sources */,
 				C32384A921D21B0B00D1F35D /* Frameworks */,
 				C32384AA21D21B0B00D1F35D /* Resources */,
+				257FB7F3E3F747627FCB6B80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +156,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		257FB7F3E3F747627FCB6B80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AutoDeloyApp/Pods-AutoDeloyApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoDeloyApp/Pods-AutoDeloyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7443258B2DA87B89B973A44C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AutoDeloyApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C32384A821D21B0B00D1F35D /* Sources */ = {
@@ -281,6 +354,7 @@
 		};
 		C32384BF21D21B0D00D1F35D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20C2E79963EE0F2619755F3B /* Pods-AutoDeloyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +376,7 @@
 		};
 		C32384C021D21B0D00D1F35D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F56491028B6524F91E6B7AD /* Pods-AutoDeloyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,7 +389,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.wumbo.AutoDeloyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development io.wumbo.AutoDeloyApp";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

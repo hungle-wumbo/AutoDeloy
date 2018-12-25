@@ -1,0 +1,6 @@
+framework module Pods_AutoDeloyApp {
+  umbrella header "Pods-AutoDeloyApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
