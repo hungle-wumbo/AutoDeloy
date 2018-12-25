@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build Beta') {
       steps {
-        sh 'fastlane beta'
+        sh 'cd AutoDeloyApp'
         sh 'fastlane beta'
       }
     }
