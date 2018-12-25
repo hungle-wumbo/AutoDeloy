@@ -21,8 +21,17 @@ platform :ios do
   	increment_build_number
   	sync_code_signing
   	disable_automatic_code_signing(path: "AutoDeloyApp.xcodeproj")
-    build_app(scheme: "AutoDeloyApp")
+    build_app(
+    	scheme: "AutoDeloyApp",
+    	export_method: "app-store",
+    	export_options: {
+      		provisioningProfiles: { 
+        		"io.wumbo.AutoDeloyApp" => "match AppStore io.wumbo.AutoDeloyApp"
+      		}
+    	}
+    )
     enable_automatic_code_signing(path: "AutoDeloyApp.xcodeproj")
-    upload_to_testflight
+    # upload_to_testflight
+    pilot(skip_waiting_for_build_processing: false)
   end
 end
